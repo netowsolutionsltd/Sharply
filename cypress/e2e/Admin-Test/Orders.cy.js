@@ -17,14 +17,14 @@ describe("ORDERS", function () {
     })
 
     it("ORDERS - Cancel orders ", function () {
-        cy.get(homepage.viewOrders).click()
+        cy.get(homepage.viewOrders).click({force:true})
         cy.wait(3000)
         cy.get(Orders.ordersField).type(Orders.ordersText)
         cy.wait(3000)
-        cy.get(Orders.orderNumber).click()
-        cy.get(Orders.cancelMenu).click()
-        cy.get(Orders.cancelOrder).click()
-        cy.get(Orders.confirmBtn).click()
+        cy.get(Orders.orderNumber).click({force:true})
+        cy.get(Orders.cancelMenu).click({force:true})
+        cy.get(Orders.cancelOrder).click({force:true})
+        cy.get(Orders.confirmBtn).click({force:true})
 
     })
     it("ORDERS - Stop cancel orders ", function () {

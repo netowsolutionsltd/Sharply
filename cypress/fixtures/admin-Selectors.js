@@ -1,25 +1,25 @@
 
     export const login ={
-        emailInput:'#email',
+        emailInput:'[data-cy="email_field"]',
         emailText:'salamilayor@gmail.com',
-        emailText2:'olasarah12@gmail.com',
-        passwordInput:'#password',
+        emailText2:'olasarah13@gmail.com',
+        passwordInput:'[data-cy="password_field"]',
         passwordText:'password',
-        logInButton:'.css-fktm5j'
+        logInButton:'[data-cy="submit_button"]'
         
     }
         export const homepage ={
-            activeOrders:'.css-mtfw6f',
-            completedOrders:'.css-1verzvp > :nth-child(2)',
-            totalOrders:'.css-1verzvp > :nth-child(3)',
+            activeOrders:'.css-fjm612 > :nth-child(1)',
+            completedOrders:'.css-fjm612 > :nth-child(2)',
+            totalOrders:'.css-fjm612 > :nth-child(3)',
             settingBtn:':nth-child(5) > .css-znfvfr > .css-12hibeq',
             logoutBtn:'.css-1lxqctd > :nth-child(11)',
-            viewOrders:'[data-cy="home_orders_card"] > .css-1sb96br',
-            viewRiders:'[data-cy="home_riders_card"] > .css-1sb96br',
-            viewCustomer:'[data-cy="home_customers_card"] > .css-1sb96br',
-            viewAnalytics:'[data-cy="home_analytics_card"] > .css-1sb96br',
-            viewSettings:'[data-cy="home_settings_card"] > .css-1sb96br',
-            backBtn:'.css-cps49',
+            viewOrders:'[data-cy="home_orders_card"] > .css-97nj9e',
+            viewRiders:'[data-cy="home_riders_card"] > .css-97nj9e',
+            viewCustomer:'[data-cy="home_customers_card"] > .css-97nj9e > .css-9b73l5',
+            viewAnalytics:'[data-cy="home_analytics_card"] > .css-97nj9e',
+            viewSettings:'[data-cy="home_settings_card"] > .css-97nj9e',
+            backBtn:'[data-cy="back_button"]',
 
         }
          export const Orders ={
@@ -27,11 +27,11 @@
         ordersText:'sarah',
         orderNumber2:':nth-child(1) > .css-1rrif7s > .css-6ofs2y',
         ordersText2:'salami layor',
-        orderNumber:'.css-1yh09yi > :nth-child(4)',
-        cancelMenu:'.css-9b73l5',
-        cancelOrder:'.css-1xfpi9q > :nth-child(1)',
-        confirmBtn:'.css-m0tz0i > .css-a00sj9',
-        cancelBtn:'.css-13opbjf',
+        orderNumber:':nth-child(1) > .css-4eeanr > .css-1c9cdsy',
+        cancelMenu:'.css-y8p3rk > .css-9b73l5',
+        cancelOrder:'.css-n8pjgo > :nth-child(1)',
+        confirmBtn:'.css-1cmvwd1',
+        cancelBtn:'.css-1ymdjg8',
         acceptBtn:'.css-1npy271',
         createOrderBtn:'[data-cy="create_button"]',
         pickupBtn:'[href="/orders/create?type=pickup"]',
