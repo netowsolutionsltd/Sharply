@@ -9,10 +9,10 @@ describe("ANALYTIS", function () {
     });
     it("Analytics", function () {
                 cy.get(homepage.viewAnalytics).click()
-                cy.get(analytic.order).click().wait(500)
-                cy.get(analytic.revenue).click().wait(500)
-                cy.get(analytic.customer).click().wait(500)
-                cy.get(analytic.rider).click().wait(500)
+                cy.get(analytic.order).click().wait(3000)
+                cy.get(analytic.revenue).click().wait(3000)
+                cy.get(analytic.customer).click().wait(3000)
+                cy.get(analytic.rider).click().wait(3000)
             })
         
 

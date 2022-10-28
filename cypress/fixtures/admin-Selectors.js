@@ -14,7 +14,7 @@
             totalOrders:'.css-fjm612 > :nth-child(3)',
             settingBtn:':nth-child(5) > .css-znfvfr > .css-12hibeq',
             logoutBtn:'.css-1lxqctd > :nth-child(11)',
-            viewOrders:'[data-cy="home_orders_card"] > .css-97nj9e',
+            viewOrders:'[data-layer="Content"]',
             viewRiders:'[data-cy="home_riders_card"] > .css-97nj9e',
             viewCustomer:'[data-cy="home_customers_card"] > .css-97nj9e > .css-9b73l5',
             viewAnalytics:'[data-cy="home_analytics_card"] > .css-97nj9e',
@@ -108,6 +108,22 @@
                 customer:':nth-child(3) > .css-2mr0zn',
                 rider:':nth-child(4) > .css-2mr0zn'
 
+
+        }
+        export const Settings  ={
+            changePassword:'.css-1y1wdjs > :nth-child(3)',
+            currentPassword:'#currentPassword',
+            newPassword:'#newPassword',
+            confirmPassword:'#confirmPassword',
+            updatePassword:'.css-8n99c8',
+            addArea:'.css-8n99c8',
+            areaName:'#name',
+            areaCovered:'#coverage'
+
+
+
+
+        
             
     
 

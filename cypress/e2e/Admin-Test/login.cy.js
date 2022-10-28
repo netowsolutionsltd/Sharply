@@ -1,9 +1,10 @@
 import {login,homepage} from "../../fixtures/admin-Selectors.js";
+const access  = require("./validlogin.cy.js");
  
 describe("login", function () {
     beforeEach(function () {
         cy.visit('/')
- 
+        
     });
  
     it("LOGIN - Invalid Login", function () {
@@ -19,7 +20,7 @@ describe("login", function () {
     })
  
     it("LOGOUT - should be able to logout", function () {
-         access.validlogin();
+        access.validlogin();
         cy.get(homepage.viewSettings).click()
         cy.get(homepage.logoutBtn).click()
     })
