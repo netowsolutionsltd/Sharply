@@ -1,4 +1,4 @@
-import {login,Homepage} from "../../fixtures/rider-Selectors.js";
+import {login,Homepage} from "../../fixtures/rider-Selector.js";
 const access  = require("./ValidLogin.cy.js");
  
 describe("login", function () {

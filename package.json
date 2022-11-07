@@ -1,0 +1,22 @@
+{
+  "name": "sharply-automation",
+  "version": "1.0.0",
+  "description": "cypress UI Test",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netowsolutionsltd/Sharply.git"
+  },
+  "author": "sarah",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress":"^10.11.0"
+  },
+  "bugs": {
+    "url": "https://github.com/netowsolutionsltd/Sharply/issues"
+  },
+  "homepage": "https://github.com/netowsolutionsltd/Sharply#readme"
+}
