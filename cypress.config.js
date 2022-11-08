@@ -1,8 +1,8 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require ('cypress')
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 8000,
-  pageLoadTimeout: 20000,
+  defaultCommandTimeout: 6000,
+  pageLoadTimeout: 80000,
   viewportHeight: 800,
   viewportWidth: 1500,
   e2e: {
