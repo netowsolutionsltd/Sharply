@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^5.15.3",
+    "cypress": "^10.11.0"
+  }
+}
