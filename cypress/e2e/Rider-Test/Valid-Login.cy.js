@@ -1,4 +1,4 @@
-import {Login} from "../../fixtures/rider-Selectors.js";
+import {Login} from "../../cypress/fixtures/rider-Selectors.js";
 
 export const ValidLogin = () => {
         cy.get(Login.phoneNumfield).type('')

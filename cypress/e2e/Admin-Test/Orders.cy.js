@@ -1,54 +1,44 @@
 import {homepage,Orders} from "../../fixtures/admin-Selectors.js";
 const access  = require("./validlogin.cy.js");
-
+Cypress.on('uncaught:exception', (error, runnable) => {
+    return false
+})
 describe("ORDERS", function () {
     beforeEach(function () {
         cy.visit('/')
         access.validlogin();
     })
 
-    it("ORDERS - Search for orders ", function () {
-        cy.get(homepage.viewOrders).click()
-        cy.wait(3000)
-        cy.get(Orders.ordersField).type(Orders.ordersText)
-        cy.get(Orders.orderNumber).click()
-        cy.wait(3000)
-
-    })
-
-    it("ORDERS - Cancel orders ", function () {
-        cy.get(homepage.viewOrders).click({force:true})
-        cy.wait(3000)
-        cy.get(Orders.ordersField).type(Orders.ordersText)
-        cy.wait(3000)
-        cy.get(Orders.orderNumber).click({force:true})
-        cy.get(Orders.cancelMenu).click({force:true})
-        cy.get(Orders.cancelOrder).click({force:true})
-        cy.get(Orders.confirmBtn).click({force:true})
-
-    })
-    it("ORDERS - Stop cancel orders ", function () {
-        cy.get(homepage.viewOrders).click()
-        cy.wait(3000)
-        cy.get(Orders.ordersField).type(Orders.ordersText)
-        cy.wait(3000)
-        cy.get(Orders.orderNumber).click()
-        cy.get(Orders.cancelMenu).click()
-        cy.get(Orders.cancelOrder).click()
-        cy.get(Orders.cancelBtn).click()
-
-    })
-
-    // it("ORDERS - accept orders ", function () {
+    // it("ORDERS - Search for orders ", function () {
     //     cy.get(homepage.viewOrders).click()
     //     cy.wait(3000)
     //     cy.get(Orders.ordersField).type(Orders.ordersText)
+    //     cy.get(Orders.orderNumber).click()
     //     cy.wait(3000)
-    //     cy.get(Orders.orderNumber2).click()
-    //     cy.get('#rider').select('Stanley').should('have.value','624728baf670bb002d40368e')
-    //     cy.get(Orders.acceptBtn).click()
 
     // })
+
+   
+
+    it("ORDERS - accept orders ", function () {
+        cy.get(homepage.viewOrders).click()
+        cy.wait(3000)
+        cy.get(Orders.filterIcon).click()
+        cy.get(Orders.orderStatus).click()
+        cy.get(Orders.pending).click()
+        cy.wait(3000)
+        cy.get(Orders.updateBtn).click()
+        cy.wait(2000)
+        cy.get(Orders.pendingOrder).click()
+        cy.wait(3000)
+        cy.get(Orders.talabi).select ('selectOptionDropdown')
+        
+        // cy.get(Orders.ordersField).type(Orders.ordersText)
+        // cy.wait(3000)
+        
+       // cy.get(Orders.acceptBtn).click()
+
+    })
 
     // it("ORDERS -Create pickup order ", function () {
     //     cy.get(homepage.viewOrders).click()
@@ -57,7 +47,7 @@ describe("ORDERS", function () {
     //     cy.wait(3000)
     //     cy.get(Orders.pickupBtn).click()
     //     cy.get(Orders.deliveryAreaField).click()
-    //     cy.get(Orders.address).click()
+    //     cy.get(Orders.addressText).type()
     //     cy.get(Orders.selectSender).click()
     //     cy.get(Orders.senderName).click()
     //     cy.get(Orders.itemField).type(Orders.items)
@@ -139,6 +129,29 @@ describe("ORDERS", function () {
     //     cy.get(Orders.riderdropdown).click()
     //     cy.get('#rider').select('Moyo').should('have.value','6284cd55cbd86b002d4ed145')
     //     cy.get(Orders.updateBtn).click()
+
+    // })
+     // it("ORDERS - Cancel orders ", function () {
+    //     cy.get(homepage.viewOrders).click({force:true})
+    //     cy.wait(3000)
+    //     cy.get(Orders.ordersField).type(Orders.ordersText)
+    //     cy.wait(3000)
+    //     cy.get(Orders.orderNumber).click({force:true})
+    //     cy.get(Orders.cancelMenu).click({force:true})
+    //     cy.get(Orders.cancelOrder).click({force:true})
+    //     cy.get(Orders.confirmBtn).click({force:true})
+
+    // })
+    // it("ORDERS - Stop cancel orders ", function () {
+    //     cy.get(homepage.viewOrders).click()
+    //     cy.wait(3000)
+    //     cy.get(Orders.ordersField).type(Orders.ordersText)
+    //     cy.wait(3000)
+    //     cy.get(Orders.orderNumber).click()
+    //     cy.get(Orders.cancelMenu).click()
+    //     cy.get(Orders.cancelOrder).click()
+    //     cy.get(Orders.cancelBtn).click()
+
     // })
 
 

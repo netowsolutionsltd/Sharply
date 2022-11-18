@@ -13,7 +13,7 @@
   "author": "sarah",
   "license": "ISC",
   "devDependencies": {
-    "cypress":"^10.11.0"
+    "cypress": "^10.11.0"
   },
   "bugs": {
     "url": "https://github.com/netowsolutionsltd/Sharply/issues"

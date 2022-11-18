@@ -1,6 +1,8 @@
 import {homepage,Rider, Orders} from "../../fixtures/admin-Selectors.js";
 const access  = require("./validlogin.cy.js");
-
+Cypress.on('uncaught:exception', (error, runnable) => {
+    return false
+})
 describe("Riders", function () {
     beforeEach(function () {
         cy.visit('/')
@@ -53,25 +55,25 @@ describe("Riders", function () {
 
     })
 
-    // it("ORDERS - Should be able to activate rider", function () {
-    //     cy.get(homepage.viewRiders).click()
-    //     cy.wait(3000)
-    //     cy.get(Rider.riderNameF).click()
-    //     cy.wait(2000)
-    //     cy.get(Orders.activationToggle).click()
+    it("ORDERS - Should be able to activate rider", function () {
+        cy.get(homepage.viewRiders).click()
+        cy.wait(3000)
+        cy.get(Rider.riderNameF).click()
+        cy.wait(2000)
+        cy.get(Rider.activationToggle).click()
     
 
-    // })
+    })
 
-    // it("ORDERS - Should be able to deactivate rider", function () {
-    //     cy.get(homepage.viewRiders).click()
-    //     cy.wait(3000)
-    //     cy.get(Rider.riderNameF).click()
-    //     cy.wait(2000)
-    //     cy.get(Orders.deactivationToggle).click()
+    it("ORDERS - Should be able to deactivate rider", function () {
+        cy.get(homepage.viewRiders).click()
+        cy.wait(3000)
+        cy.get(Rider.riderNameF).click()
+        cy.wait(2000)
+        cy.get(Rider.deactivationToggle).click()
     
 
-    // })
+    })
 
 
 
