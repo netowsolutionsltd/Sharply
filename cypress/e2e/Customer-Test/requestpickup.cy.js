@@ -69,5 +69,6 @@ describe("requestpickup", function () {
     })
     it("Request pickup - Submit Request ", function () {
         cy.get(requestpickup.submitRequest).click()
+    
 })
 })
