@@ -13,21 +13,14 @@ describe("login", function () {
         cy.get(Homepage.backBtn).click()
     })
     it("clcik on track order button ",function(){
-        cy.get(Homepage.trackOrder).click()
+        cy.get(Homepage.trackOrder).click().wait(3000)
        
-    })
-    it("wait for 3 seconds ",function(){
-        //cy.wait(3000)
     })
     it("click on back button ",function(){
         cy.get(Homepage.backBtn).click()
     })
     it("click on my orders ",function(){
-        cy.get(Homepage.myOrders).click()
-        
-    })
-    it("wait for 3 seconds ",function(){
-        cy.wait(3000)
+        cy.get(Homepage.myOrders).click().wait(3000)
         
     })
     it("click on back button",function(){
@@ -35,10 +28,7 @@ describe("login", function () {
         
     })
     it("click on my accoount button",function(){
-        cy.get(Homepage.myAccount).click()
-    })
-    it("wait 3 seconds ",function(){
-        cy.wait(3000)
+        cy.get(Homepage.myAccount).click().wait(3000)
         
     })
     it("click on back button ",function(){
