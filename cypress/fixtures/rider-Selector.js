@@ -16,6 +16,12 @@ export const login ={
         activeOrders:'.css-1qatdbx',
         viewOrder:':nth-child(1) > .css-97nj9e',
         backBtn:'.css-ie8837'
+      
+    export const ViewOrders ={
+          recentOrders:'.css-1it5o91',
+          viewOrderss:':nth-child(1) > .css-97nj9e',
+
+ }
 
 
         
@@ -23,4 +29,3 @@ export const login ={
 
 
 
-    }

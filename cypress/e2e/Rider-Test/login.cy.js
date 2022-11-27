@@ -16,7 +16,7 @@ describe("login", function () {
     it("LOGIN - Valid Login", function () {
         cy.get(login.phoneNumfield).type('07061549226')
         cy.get(login.passwordInput).type('password')
-        cy.get(login.logInButton).click()
+        cy.get(login.logInButton).click({force:true)
     })
 
     it("LOGIN - Logout", function () {
@@ -25,7 +25,6 @@ describe("login", function () {
         cy.get(setting.logoutBtn).click()
 
     })
-
 
 
 
