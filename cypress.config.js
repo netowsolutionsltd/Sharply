@@ -11,7 +11,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.js')(on, config)
     },
-    baseUrl: 'https://admin-staging.sharply.africa/auth/login',
+    baseUrl: 'https://staging.admin.sharply.africa',
     "defaultCommandTimeout": 80000,
     "pageLoadTimeout": 200000,
     "viewportHeight": 800,
