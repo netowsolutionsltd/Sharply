@@ -16,6 +16,7 @@ export const setting = {
   newPassword: "#newPassword",
   confirmPassword: "#confirmPassword",
   updatePassword: ".css-8n99c8",
+
 };
 
 export const Order = {
