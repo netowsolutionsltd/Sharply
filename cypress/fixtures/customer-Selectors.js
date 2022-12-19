@@ -15,7 +15,7 @@
     requestPickup:'.css-13b5uzk > :nth-child(1)',
     trackOrder:':nth-child(2) > .css-97nj9e',
     myOrders:':nth-child(2) > .css-97nj9e', 
-    myAccount:':nth-child(4) > .css-97nj9e', 
+    myAccount:'.css-13b5uzk > :nth-child(4)', 
     backBtn:'.css-ie8837',
     logOut:':nth-child(6) > .css-bnjhzj'
         

@@ -20,7 +20,7 @@ describe("login", function () {
     })
 
     it("LOGOUT - should be able to logout", function () {
-        //  access.validLogin();
+          access.validLogin();
         cy.get(Homepage.myAccount).click()
         cy.get(Homepage.logOut).click()
     })

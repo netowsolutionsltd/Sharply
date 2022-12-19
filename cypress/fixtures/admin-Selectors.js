@@ -66,7 +66,7 @@ export const Orders = {
   datePicker1: ":nth-child(1) > .DayPickerInput > .css-rphyl4",
   datePicker2: ":nth-child(2) > .DayPickerInput > .css-rphyl4",
   date1: '[aria-label="Wed Dec 14 2022"]',
-  date2: '.DayPicker-Day--today',
+  date2: '[aria-label="Sun Dec 18 2022"]',
   riderdropdown: ":nth-child(3) > .css-1ku7scz",
   updateBtn: ".css-1cmvwd1",
   orderAccepted:".css-1yh09yi > :nth-child(2)",
@@ -80,11 +80,11 @@ export const Orders = {
   receiverPD:':nth-child(4) > .css-cu9tf9 > .css-ke7a7 > .css-8p60x1 > :nth-child(1) > .css-2g5l14 > .css-3bkuyv',
   receiverName6:':nth-child(2) > .css-1cn95xj',
   item3F:'.css-20ppry',
-  //selectOptions:'#rider'
+  
 
 };
 export const Rider = {
-  addRiderBtn: ".css-1wm60i4",
+  addRiderBtn:'[data-cy="create_button"]',
   nameField: "#name",
   nameText: "Cute Test",
   numberField: "#phoneNumber",
@@ -95,7 +95,7 @@ export const Rider = {
   saveDetailsBtn: '[data-cy="submit_button"]',
   searchField: ".css-d7j2r5",
   riderName: "Mubarak Salami",
-  copyIcon: ".css-1pgway7 > .css-9b73l5",
+  copyIcon: ".css-16gcrgi",
   editIcon: "rect",
   vnumberText2: "Dorime",
   editDetailsBtn: '[data-cy="submit_button"]',

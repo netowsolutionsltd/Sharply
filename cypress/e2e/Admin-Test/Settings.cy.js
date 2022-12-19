@@ -1,5 +1,8 @@
 import {homepage,Settings} from "../../fixtures/admin-Selectors.js";
 const access  = require("./validlogin.cy.js");
+Cypress.on('uncaught:exception', (error, runnable) => {
+    return false
+})
 
 describe("ORDERS", function () {
     beforeEach(function () {
