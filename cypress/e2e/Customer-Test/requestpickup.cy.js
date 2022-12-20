@@ -29,7 +29,7 @@ describe("requestpickup", function () {
     })
 
     it("Request pickup - Delivery area ", function () {
-        cy.get(requestpickup.deliveryarea1).click()
+      cy.get(requestpickup.deliveryarea1).click()
 
     })
     it("Request pickup - Select Area ", function () {

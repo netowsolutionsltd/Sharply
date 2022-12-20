@@ -5,7 +5,7 @@ import {Order} from "../../fixtures/rider-Selector.js";
 
 describe("login", function () {
     beforeEach(function () {
-        cy.visit('https://rider-staging.sharply.africa/auth/login') 
+        cy.visit('https://staging.rider.sharply.africa') 
         access.ValidLogin();
 
     });

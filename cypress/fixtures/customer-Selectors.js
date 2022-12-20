@@ -79,6 +79,8 @@
     // senderText:'BLESSED',
     // senderNumber1x:':nth-child(3) > .css-1fwh0fa > .css-ke7a7 > .css-8p60x1 > :nth-child(2) > .css-uz7lb6 > .react-tel-input > .flag-dropdown > .selected-flag',
     // senderNumbersx:'70916400809',
+    // senderAddress:'#sender\.address',
+    // senderaddressTxt:'44 Adeniyi jones, Lagos',
     dropoffDetails:':nth-child(4) > .css-omz906 > .css-88vlwa > .css-1fycmma',
     // receipientNamee:'#recipient\.name',
     // receipientText:'HYBRID CODER',
@@ -87,6 +89,7 @@
     // countrynameText:'Nigeria',
     // receipientAddresss:'#recipient\.address',
     // receipientaddressText1:'55 Akwaugo street, Lekki',
+    packageDetailss:'.css-141rulm > .css-omz906',
     // packageDetailsx:'#items\.0\.item',
     // packageText:'2 WHITE SHIRTS'
     // packageQuantity:'#items\.0\.quantity',
