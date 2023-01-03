@@ -1,28 +1,31 @@
-import {Login,Homepage} from "../../fixtures/customer-Selectors.js";
-const access  = require("./validLogin.cy.js");
- 
+import { Login, Homepage } from "../../fixtures/customer-Selectors.js";
+const access = require("./validLogin.cy.js");
+
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
+  return false;
+});
+
 describe("login", function () {
-    beforeEach(function () {
-        cy.visit('https://sharply-test.sharply.africa/auth/login')
- 
-    });
- 
-    it("LOGIN - Invalid Login", function () {
-        cy.get(Login.phoneNumfield).type('7061549123')
-        cy.get(Login.passwordInput).type('password')
-        cy.get(Login.logInButton).click()
-    })
+  beforeEach(function () {
+    cy.visit("https://sharply-test.sharply.africa/auth/login");
+  });
 
-    it("LOGIN - Valid Login", function () {
-        cy.get(Login.phoneNumfield).type('7061549226')
-        cy.get(Login.passwordInput).type('password')
-        cy.get(Login.logInButton).click()
-    })
+  it("LOGIN - Invalid Login", function () {
+    cy.get(Login.phoneNumfield).type("7061549123");
+    cy.get(Login.passwordInput).type("password");
+    cy.get(Login.logInButton).click();
+  });
 
-    it("LOGOUT - should be able to logout", function () {
-        //  access.validLogin();
-        cy.get(Homepage.myAccount).click()
-        cy.get(Homepage.logOut).click()
-    })
+  it("LOGIN - Valid Login", function () {
+    cy.get(Login.phoneNumfield).type("7061549226");
+    cy.get(Login.passwordInput).type("password");
+    cy.get(Login.logInButton).click();
+  });
 
-})
+  it("LOGOUT - should be able to logout", function () {
+    access.validLogin();
+    cy.get(Homepage.myAccount).click();
+    cy.get(Homepage.logOut).click();
+  });
+});

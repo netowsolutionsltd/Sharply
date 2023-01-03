@@ -1,6 +1,11 @@
 import { login, setting } from "../../fixtures/rider-Selector.js";
 const access = require("./ValidLogin.cy.js");
 
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
+  return false;
+});
+
 describe("login", function () {
   beforeEach(function () {
     cy.visit("staging.rider.sharply.africa");

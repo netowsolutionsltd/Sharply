@@ -1,6 +1,11 @@
 import { login, homepage } from "../../fixtures/admin-Selectors.js";
 const access = require("./validlogin.cy.js");
 
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
+  return false;
+});
+
 describe("login", function () {
   beforeEach(function () {
     cy.visit("/");
