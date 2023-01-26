@@ -20,25 +20,26 @@ describe("ORDERS", function () {
     cy.wait(3000);
   });
 
-  it("ORDERS - Cancel orders ", function () {
-    cy.get(homepage.viewOrders).click({ force: true });
-    cy.wait(3000);
-    cy.get(Orders.ordersField).type(Orders.ordersText);
-    cy.wait(3000);
-    cy.get(Orders.orderNumber).click({ force: true });
-    cy.get(Orders.cancelMenu).click({ force: true });
-    cy.get(Orders.cancelOrder).click({ force: true });
-    cy.get(Orders.confirmBtn).click({ force: true });
-  });
   it("ORDERS - Stop cancel orders ", function () {
     cy.get(homepage.viewOrders).click();
     cy.wait(3000);
-    cy.get(Orders.ordersField).type(Orders.ordersText);
+    cy.get(Orders.ordersField).type('temitope');
     cy.wait(3000);
-    cy.get(Orders.orderNumber).click();
+    cy.get(Orders.orderNumber3).click();
     cy.get(Orders.cancelMenu).click();
     cy.get(Orders.cancelOrder).click();
     cy.get(Orders.cancelBtn).click();
+  });
+
+  it("ORDERS - Cancel orders ", function () {
+    cy.get(homepage.viewOrders).click({ force: true });
+    cy.wait(3000);
+    cy.get(Orders.ordersField).type('temitope');
+    cy.wait(3000);
+    cy.get(Orders.orderNumber3).click({ force: true });
+    cy.get(Orders.cancelMenu).click({ force: true });
+    cy.get(Orders.cancelOrder).click({ force: true });
+    cy.get(Orders.confirmBtn).click({ force: true });
   });
 
   // it("ORDERS - accept orders ", function () {
