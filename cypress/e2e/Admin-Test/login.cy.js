@@ -7,7 +7,7 @@ describe("login", function () {
   });
 
   it("LOGIN - Invalid Login", function () {
-    cy.get(login.emailInput).type(login.emailText2);
+    cy.get(login.emailInput).type("toppy@yahoo.com");
     cy.get(login.passwordInput).type(login.passwordText);
     cy.get(login.logInButton).click();
   });
