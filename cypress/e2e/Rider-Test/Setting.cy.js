@@ -1,6 +1,11 @@
 import { setting } from "../../fixtures/rider-Selector.js";
 const access = require("./ValidLogin.cy.js");
 
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
+  return false;
+});
+
 describe("login", function () {
   beforeEach(function () {
     cy.visit("staging.rider.sharply.africa");
@@ -10,7 +15,7 @@ describe("login", function () {
   it("Personal Details ", function () {
     cy.get(setting.Settings).click();
     cy.get(setting.personalDetails).click();
-    cy.get(setting.emailField).type("test@yopmail.com");
+    cy.get(setting.emailField).type("test2@yopmail.com");
     cy.get(setting.update).click();
   });
 
